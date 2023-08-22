@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <!-- Iframe - Set Height and Width -->
-<h2>Phạm Anh Tú -2121051161</h2>
-<p>Phạm Anh Tú -2121051161 </p>
 
-<iframe src="demo_iframe.htm" style="height:200px;width:300px" title="Iframe Example"></iframe>
-<!--Iframe - Remove the Border  -->
-<h2>Phạm Anh Tú -2121051161</h2>
-<p>With CSS, you can also change the size, style and color of the iframe's border:</p>
+<h1>Phạm Anh Tú -2121051161</h1>
 
-<iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
-<!--Iframe - Target for a Link  -->
-<h2>Phạm Anh Tú -2121051161</h2>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
 
-<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+<p id="demo"></p>
 
-<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+<!--The HTML <script> Tag  -->
+<h2>Phạm Anh Tú -2121051161 </h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
 
-<p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+
+</script>
+<!--A Taste of JavaScript  -->
+<h1>Phạm Anh Tú -2121051161 JavaScript</h1>
+
+<p>JavaScript can change the content of an HTML element:</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="test">This is a demonstration.</p>
+
+<script>
+function myFunction() { 
+  document.getElementById("test").innerHTML = "Phạm Anh Tú -2121051161";
+}
+</script>
+<!-- The HTML <noscript> Tag -->
+  <p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
 </body>
-</html>
+</html> 
