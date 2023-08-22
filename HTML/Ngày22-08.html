@@ -1,38 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <p><a href="#C3">Jump to Chapter 3</a></p>
-  <p><a href="#C5">Jump to Chapter 5</a></p>
-  
-  <h2>Chapter 1</h2>
-  <p>Phạm Anh Tú -2121051161 </p>
-  
-  <h2>Chapter 2</h2>
-  <p>Phạm Anh Tú -2121051161 </p>
-  
-  <h2 id="#C3">Chapter 3</h2>
-  <p>Phạm Anh Tú -2121051161 </p>
-  
-  <h2>Chapter 4</h2>
-  <p>Phạm Anh Tú -2121051161 </p>
-  
-  <h2 id="#C5">Chapter 5</h2>
-  <p>Phạm Anh Tú -2121051161 </p>
-  
-  <h2>Chapter 6</h2>
-  <p>Phạm Anh Tú -2121051161 </p>
+<body>
+  <!-- Iframe - Set Height and Width -->
+<h2>Phạm Anh Tú -2121051161</h2>
+<p>Phạm Anh Tú -2121051161 </p>
 
-  <!-- Using The id Attribute in JavaScript -->
-  <h2>Using The id Attribute in JavaScript</h2>
-<p>Phạm Anh Tú -2121051161</p>
+<iframe src="demo_iframe.htm" style="height:200px;width:300px" title="Iframe Example"></iframe>
+<!--Iframe - Remove the Border  -->
+<h2>Phạm Anh Tú -2121051161</h2>
+<p>With CSS, you can also change the size, style and color of the iframe's border:</p>
 
-<h1 id="myHeader">Hello World!</h1>
-<button onclick="displayResult()">Change text</button>
+<iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
+<!--Iframe - Target for a Link  -->
+<h2>Phạm Anh Tú -2121051161</h2>
 
-<script>
-function displayResult() {
-  document.getElementById("myHeader").innerHTML = "Phạm Anh Tú -2121051161!";
-}
-</script>
+<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+<p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
 </body>
 </html>
