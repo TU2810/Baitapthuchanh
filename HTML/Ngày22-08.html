@@ -1,79 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.city {
-  background-color: tomato;
-  color: white;
-  border: 2px solid black;
-  margin: 20px;
-  padding: 20px;
-}
-.note {
-  font-size: 120% ;
-  color: red;
-}
-.town  {
-  background-color: tomato;
-  color: white;
-  padding: 10px;
-}
-.main {
-  text-align: center;
-}
-</style>
-</head>
-<body>
+  <p><a href="#C3">Jump to Chapter 3</a></p>
+  <p><a href="#C5">Jump to Chapter 5</a></p>
+  
+  <h2>Chapter 1</h2>
+  <p>Phạm Anh Tú -2121051161 </p>
+  
+  <h2>Chapter 2</h2>
+  <p>Phạm Anh Tú -2121051161 </p>
+  
+  <h2 id="#C3">Chapter 3</h2>
+  <p>Phạm Anh Tú -2121051161 </p>
+  
+  <h2>Chapter 4</h2>
+  <p>Phạm Anh Tú -2121051161 </p>
+  
+  <h2 id="#C5">Chapter 5</h2>
+  <p>Phạm Anh Tú -2121051161 </p>
+  
+  <h2>Chapter 6</h2>
+  <p>Phạm Anh Tú -2121051161 </p>
 
-<div class="city main ">
-<h2>Phạm Anh Tú -2121051161 </h2>
+  <!-- Using The id Attribute in JavaScript -->
+  <h2>Using The id Attribute in JavaScript</h2>
 <p>Phạm Anh Tú -2121051161</p>
-</div> 
 
-<div class="city main">
-<h2>Phạm Anh Tú -2121051161</h2>
-<p>Phạm Anh Tú -2121051161</p>
-</div>
-
-<div class="city">
-<h2>Phạm Anh Tú -2121051161</h2>
-<p>Phạm Anh Tú -2121051161</p>
-</div>
-<h1>My <span class="note">Phạm Anh Tú -2121051161</span> Heading</h1>
-<p>This is some <span class="note">important</span> text.</p>
-<!--The Syntax For Class  -->
-
-<h2 class="town main">Phạm Anh Tú -2121051161</h2>
-<p>London is the capital of England.</p>
-
-<h2 class="town main">Phạm Anh Tú -2121051161</h2>
-<p>Paris is the capital of France.</p>
-
-<h2 class="town main">Phạm Anh Tú -2121051161</h2>
-<p>Tokyo is the capital of Japan.</p>
-<!--Use of The class Attribute in JavaScript  -->
-<h2>Phạm Anh Tú -2121051161</h2>
-<p>Click the button to hide all elements with class name "city":</p>
-
-<button onclick="myFunction()">Hide elements</button>
-
-<h2 class="city">Phạm Anh Tú -2121051161</h2>
-<p>London is the capital of England.</p>
-
-<h2 class="city">Phạm Anh Tú -2121051161</h2>
-<p>Paris is the capital of France.</p>
-
-<h2 class="city">Phạm Anh Tú -2121051161</h2>
-<p>Tokyo is the capital of Japan.</p>
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Change text</button>
 
 <script>
-function myFunction() {
-  var x = document.getElementsByClassName("city");
-  for (var i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Phạm Anh Tú -2121051161!";
 }
 </script>
-
 </body>
 </html>
