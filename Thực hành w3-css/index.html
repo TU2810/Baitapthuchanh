@@ -3,22 +3,69 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
+<body class="w3-container w3-auto">
 
-<div class="w3-container w3-teal">
-  <h1>My Car</h1>
+<h2>Display Warnings</h2>
+<p>The w3-panel class can be used to display warnings:</p>
+
+<div class="w3-panel w3-pale-yellow w3-border">
+  <h3>Warning!</h3>
+  <p>Yellow often indicates a warning that might need attention.</p>
 </div>
-
-<img src="img_car.jpg" alt="Car" style="width:100%">
-
+<!--  -->
 <div class="w3-container">
-  <p>A car is a wheeled, self-powered motor vehicle used for transportation.</p>
+  <h2>Photo Card</h2>
+
+  <div class="w3-card-4" style="width:50%">
+    <img src="img_snowtops.jpg" alt="Alps" style="width:100%">
+    <div class="w3-container w3-center">
+      <p>The Italian / Austrian Alps</p>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="w3-container">
+  <h2>Border Around Table</h2>
+  <p>The w3-border class adds a border around the table.</p>
+
+  <table class="w3-table w3-striped w3-border">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+    </tr>
+  </table>
+</div>
+<!--  -->
+<div class="w3-container">
+  <h2>List Header</h2>
+  <p>An example of how to add a heading element inside the list item.</p>
+
+  <ul class="w3-ul w3-border">
+    <li><h2>Names</h2></li>
+    <li>Jill</li>
+    <li>Eve</li>
+    <li>Adam</li>
+  </ul>
 </div>
 
-<div class="w3-container w3-teal">
-  <p>My footer information</p>
-</div>
+
 
 </body>
-</html> 
-  
+</html>
+
