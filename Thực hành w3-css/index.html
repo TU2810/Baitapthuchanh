@@ -6,34 +6,52 @@
 <body>
 
 <div class="w3-container">
-  <h3>Mobile First Fluid Grid</h3>
-  <p class="w3-large">Try to resize the window!</p>
-</div>
+  <h2>Filter Dropdown Click</h2>
+  <p>Click on the dropdown and search for a specific link inside the input field.</p>
 
-<div class="w3-row">
-  <div class="w3-col m1 w3-center w3-grey">1</div>
-  <div class="w3-col m1 w3-center">2</div>
-  <div class="w3-col m1 w3-center w3-grey">3</div>
-  <div class="w3-col m1 w3-center">4</div>
-  <div class="w3-col m1 w3-center w3-grey">5</div>
-  <div class="w3-col m1 w3-center">6</div>
-  <div class="w3-col m1 w3-center w3-grey">7</div>
-  <div class="w3-col m1 w3-center">8</div>
-  <div class="w3-col m1 w3-center w3-grey">9</div>
-  <div class="w3-col m1 w3-center">10</div>
-  <div class="w3-col m1 w3-center w3-grey">11</div>
-  <div class="w3-col m1 w3-center">12</div>
-</div>
-
-<div class="w3-row">
-  <div class="w3-col w3-container m4 l3 w3-yellow">
-    <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
-  </div>
-  <div class="w3-col w3-container m8 l9">  
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
+  <div class="w3-dropdown-click">
+    <button class="w3-button w3-black" onclick="dropFunction()">Dropdown</button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
+      <input class="w3-input w3-padding" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a class="w3-bar-item w3-button" href="#about">About</a>
+      <a class="w3-bar-item w3-button" href="#base">Base</a>
+      <a class="w3-bar-item w3-button" href="#blog">Blog</a>
+      <a class="w3-bar-item w3-button" href="#contact">Contact</a>
+      <a class="w3-bar-item w3-button" href="#custom">Custom</a>
+      <a class="w3-bar-item w3-button" href="#support">Support</a>
+      <a class="w3-bar-item w3-button" href="#tools">Tools</a>
+    </div>
   </div>
 </div>
+
+<script>
+// Dropdown
+function dropFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Filter
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDIV");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
 
 </body>
-</html>       
+</html>
