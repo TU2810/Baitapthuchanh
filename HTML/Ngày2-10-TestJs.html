@@ -6,17 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>1st JavaScript </h1>
+    <h1 id="counter"> 0 </h1>
     <button onclick="Hello()"> Click Here ! </button>
 
     
 </body>
 <script>
-    function Hello()
+    let counter = 0 ;
+    function count()
     {
-       document.querySelector('h1').innerHTML = '2nd JAvaScript' ;
+        counter++;
+       document.querySelector('#counter').innerHTML = counter ;
     }
     
 </script>
-<title>1st JavaScript </title>
+<title>My Website </title>
 </html>
