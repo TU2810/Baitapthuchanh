@@ -6,61 +6,138 @@
 <body>
 
 <div class="w3-container">
-  <h2>Displaying Panels</h2>
-  <p>Panels are the same as containers except for an added top and bottom margin.</p>
+  <h2>Borders</h2>
 
-  <div class="w3-panel w3-red">
-    <p>I am a panel.</p>
+  <div class="w3-panel w3-border">
+    <p>I have borders.</p>
   </div>
-  <div class="w3-panel w3-green">
-    <p>I am a panel.</p>
+  
+  <div class="w3-panel w3-border-left">
+    <p>I have only a left border.</p>
   </div>
-
-  <div class="w3-container w3-red">
-    <p>I am a container.</p>
+  
+  <div class="w3-panel w3-border-right">
+    <p>I have only a right border.</p>
   </div>
-  <div class="w3-container w3-green">
-    <p>I am a container.</p>
-  </div>
-</div>
-<!--  -->
-<div class="w3-container">
-  <h2>Panels for Notes</h2>
-  <p>The w3-panel class can be used to display notes:</p>
-
-  <div class="w3-panel w3-pale-green">
-    <p>London is the most populous city in the United Kingdom,
-    with a metropolitan area of over 9 million inhabitants.</p>
+  
+  <div class="w3-panel w3-border-top w3-border-bottom">
+    <p>I have top and bottom borders.</p>
   </div>
 
 </div>
 <!--  -->
 <div class="w3-container">
-  <h2>Panels for Quotes</h2>
-  <p>The w3-panel class can be used to display quotes.</p>
+  <h2>Border Colors</h2>
 
-  <div class="w3-panel w3-leftbar w3-sand w3-xxlarge w3-serif">
-    <p><i>"Make it as simple as possible, but not simpler."</i></p>
+  <div class="w3-panel w3-border w3-border-red">
+    <p>I have red borders.</p>
   </div>
+
+  <div class="w3-panel w3-border-left w3-border-blue">
+    <p>I have a blue left border.</p>
+  </div>
+
+  <div class="w3-panel w3-border-top w3-border-bottom w3-border-green">
+    <p>I have a green top and bottom border.</p>
+  </div>
+
+  <div class="w3-panel w3-border-left w3-pale-red w3-border-red">
+    <p>I have a red left border and a pale-red background color.</p>
+  </div>
+
 </div>
 <!--  -->
 <div class="w3-container">
-  <h2>Panels for Alerts</h2>
-  <p>The w3-panel class can be used to display alerts:</p>
 
-  <div class="w3-panel w3-red">
-    <h3>Danger!</h3>
-    <p>Red often indicates a dangerous or negative situation.</p>
+  <h2>Borders</h2>
+  <div class="w3-panel w3-border">
+    <p>My borders are normal.</p>
   </div>
+  
+  <div class="w3-panel w3-border w3-round-small">
+   <p>My borders are rounded (small).</p>
+  </div>
+  
+  <div class="w3-panel w3-border w3-round">
+    <p>My borders are rounded.</p>
+  </div>
+
+  <div class="w3-panel w3-border w3-round-large">
+    <p>I have large rounded borders.</p>
+  </div>
+
+  <div class="w3-panel w3-border w3-round-xlarge">
+    <p>I have xlarge rounded borders.</p>
+  </div>
+
+  <div class="w3-panel w3-border w3-round-xxlarge">
+    <p>I have xxlarge rounded borders.</p>
+  </div>
+<!--  -->
+<div class="w3-container">
+  <h2>Thick Border Bars</h2>
+
+  <div class="w3-panel w3-light-grey w3-leftbar">
+    <p>I have a thick left border.</p>
+  </div>
+  
+  <div class="w3-panel w3-light-grey w3-leftbar w3-border-grey">
+    <p>I have a thick left border.</p>
+  </div>
+ 
+ <div class="w3-panel w3-leftbar w3-border-blue">
+    <p>I have a thick blue left border.</p>
+  </div>
+ 
+  <div class="w3-panel w3-leftbar w3-border-blue w3-text-blue">
+    <p>I have a thick blue left border.</p>
+  </div>
+
+  <div class="w3-panel w3-leftbar w3-border-red">
+    <p>I have a thick red left border.</p>
+  </div>
+ 
+  <div class="w3-panel w3-leftbar w3-border-red w3-text-red">
+    <p>I have a thick red left border.</p>
+  </div>
+
+  <div class="w3-panel w3-leftbar w3-border-blue w3-pale-blue">
+    <p>I have a thick blue left border and a pale-blue background color.</p>
+  </div>
+ 
+  <div class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red">
+    <p>I have a thick red top and bottom border and a pale-red background color.</p>
+  </div>
+
+  <div class="w3-panel w3-leftbar w3-border-green">
+    <p>I have a thick green left border.</p>
+  </div>
+ 
+  <div class="w3-panel w3-leftbar w3-border-green w3-text-green">
+    <p>I have a thick green left border.</p>
+  </div>
+
+  <div class="w3-panel w3-leftbar w3-border-yellow">
+    <p>I have a thick yellow left border.</p>
+  </div>
+ 
+  <div class="w3-panel w3-leftbar w3-border-yellow w3-text-yellow">
+    <p>I have a thick yellow left border.</p>
+  </div>
+
 </div>
 <!--  -->
-<button class="w3-button w3-red" onclick="document.getElementById('id01').style.display='block'">Show Panel</button> 
+<div class="w3-container">
+  <h2>Hoverable Borders</h2>
 
-<div id="id01" class="w3-panel w3-green w3-display-container" style="display:none">
-  <span onclick="this.parentElement.style.display='none'"
-  class="w3-button w3-red w3-display-topright">x</span>
-  <p>Click on the X to close this panel.</p>
-  <p>Click on the X to close this panel.</p>
+  <div style="border:16px solid white" class="w3-panel w3-hover-border-green">
+    <p>Thick white (invisible) border that turns green on hover.</p>
+  </div>
+
+  <div style="border:16px solid white" class="w3-panel w3-hover-border-black">
+    <p>Thick white (invisible) border that turns black on hover.</p>
+  </div>
+
 </div>
 </body>
 </html>
