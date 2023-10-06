@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính tổng</title>
+</head>
+<body>
+ <form id="myform" action="">
+    Nhap a : <input type="text" id="a"/><br>
+    Nhap b : <input type="text" id="b"/><br>
+    Tong a va b : <br>
+    <input type="button" value="Tinh Tong" onClick="checkForm()">
+ </form>
+  <script>
+    function checkForm(){
+        var number = document.getElementById('a').value;
+        var number2 = document.getElementById('b').value;
+        if(isNaN(number)||isNaN(number2)){
+            alert("value not a number ");
+        }
+        else{
+            var result = parseInt(number) + parseInt(number2);
+            alert("Tong a +b = " + result );
+        }
+    }
+  </script>
+</body>
+</html>
