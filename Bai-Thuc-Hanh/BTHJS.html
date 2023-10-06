@@ -2,26 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tính tổng</title>
+  <title>Kiểm tra form đăng ký thành viên</title>
 </head>
 <body>
- <form id="myform" action="">
-    Nhap a : <input type="text" id="a"/><br>
-    Nhap b : <input type="text" id="b"/><br>
-    Tong a va b : <br>
-    <input type="button" value="Tinh Tong" onClick="checkForm()">
- </form>
+  <form onsubmit="return checkForm()" >
+    <p>Họ Tên (*) : <input type="text" id="name" placeholder=""/><br></p>
+    <p>Tên Đăng Nhập (*) : <input type="text" id="tdn" placeholder=""/><br></p>
+    <p>Password (*) : <input type="Password" id="psw1" /><br></p>
+    <p>Nhập Lại Password (*) : <input type="Password" id="psw2" /><br></p>
+      Quốc Tịch (*) : 
+        <select name="Quoc tich" id="qt">
+        <option value="vn">Viet Nam</option>
+        <option value="tq">Trung Quoc</option>
+        <option value="lao">Lao</option>
+        </select>
+    <p>Email (*) : <input type="email" id="email" placeholder=""> <br></p>
+    <p>Số Điện Thoại (*) : <input type="text" id="phone"/> <br></p>
+    <p>Câu Hỏi Bí Mật (*) : <select name="Question" id="ques" style="width: 250px;">
+        <option value="c1">Cấp 1 bạn học trường gì ? </option>
+        <option value="c2">Cập 2 bạn học trường gì ? </option>
+        </select> <br></p>
+    <p>Trả lời (*) : <input type="text" id="answer"><br></p>
+    <button type="button" onclick="checkForm()">Kiểm tra</button>
+    <button type="submit">Đăng ký</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    function checkForm(){
-        var number = document.getElementById('a').value;
-        var number2 = document.getElementById('b').value;
-        if(isNaN(number)||isNaN(number2)){
-            alert("value not a number ");
-        }
-        else{
-            var result = parseInt(number) + parseInt(number2);
-            alert("Tong a +b = " + result );
-        }
+    function checkForm() {
+      // Lấy giá trị từ các ô nhập trong form
+      var name = document.getElementById("name").value;
+      var tdn = document.getElementById('tdn').value;
+      var password1 = document.getElementById("psw1").value;
+      var password2 = document.getElementById("psw2").value;
+      var quoctich = document.getElementById('qt').value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById('phone').value;
+      var question = document.getElementById('ques').value;
+      var answer = document.getElementById('answer').value;
+      // Kiểm tra xem người dùng đã nhập thông tin chưa
+      if (name=== "" ) {
+        alert("Vui lòng nhập tên.");
+        return false;
+      }
+      // Kiểm tra xem tên phải đủ 8 ký tự 
+      if (tdn .lenght < 8) {
+        alert("Tên đăng nhập phải hơn 8 ký tự  .");
+        return false;
+      }
+       // Kiểm tra xem password và repassword có giống nhau không
+    if (password1 !== password2 ) {
+      alert("Mật khẩu không trùng khớp.");
+      return false;
+    }
+
+    // Kiểm tra xem password có nhiều hơn 8 ký tự không
+    if (password1 .length < 8) {
+      alert("Mật khẩu phải nhiều hơn 8 ký tự.");
+      return false;
+    }
+    // Kiểm tra email phải có @ 
+      if (quoctich === "") {
+        alert("Vui lòng chọn quốc tịch .");
+        return false;
+      }
+      if (email === "") {
+        alert("Vui lòng nhập email.");
+        return false;
+      }
+      if (!/[0-9]/.test(phone)) {
+      alert("Số điện thoại chỉ được nhập chữ số.");
+        return false;
+      }
+      if (question === "") {
+        alert("Vui lòng chọn câu hỏi .");
+        return false;
+      }
+      if (answer === "") {
+        alert("Vui lòng nhập câu trả lời . ");
+        return false;
+      }
+
+     
+      // Nếu tất cả các ô nhập đều có giá trị, thì form hợp lệ
+      return true;
     }
   </script>
 </body>
