@@ -16,13 +16,22 @@
 </body>
 <script>
 document.addEventListener('DOMContentLoaded',function() {
-    document.querySelector('#new-task').onsubmit = function() {
-        const li = document.createElement('li');
-        li.innerHTML = document.querySelector('#task').value;
-        document.querySelector('#tasks').append(li);
-        document.querySelector('#task').value='';
-        return false;
-    };
+    document.querySelector('#submit').disabled = true;
+// Enable button only if there is text in the input field
+document.querySelector('#task').onkeyup = function() {
+document.querySelector('#submit').disabled = false;
+};
+document.querySelector('#new-task').onsubmit = function() {
+// Create new item for list
+const li = document.createElement('li');
+li.innerHTML = document.querySelector('#task').value;
+// Add new item to task list
+document.querySelector('#tasks').append(li); // Clear input field and disable button again
+document.querySelector('#task').value = '';
+document.querySelector('#submit').disabled = true;
+// Stop form from submitting
+return false;
+};
 });
 </script>
 <title>My Website</title>
