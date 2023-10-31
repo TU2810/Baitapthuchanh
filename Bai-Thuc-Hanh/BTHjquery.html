@@ -5,28 +5,22 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("#div1").addClass("important blue");
+    $("p").css({"background-color": "yellow", "font-size": "200%"});
   });
 });
 </script>
-<style>
-.important {
-  font-weight: bold;
-  font-size: xx-large;
-}
-
-.blue {
-  color: blue;
-}
-</style>
 </head>
 <body>
 
-<div id="div1">Phạm Anh Tú 2121051161</div>
-<div id="div2">Phạm Anh Tú 2121051161</div>
-<br>
+<h2>Phạm Anh Tú 2121051161</h2>
 
-<button>Add classes to first div element</button>
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<p>This is a paragraph.</p>
+
+<button>Set multiple styles for p</button>
 
 </body>
 </html>
