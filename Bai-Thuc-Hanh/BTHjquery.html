@@ -3,28 +3,19 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("#btn1").click(function(){
-    $("#test1").text(function(i, origText){
-      return "Old text: " + origText + " New text: Hello world! (index: " + i + ")"; 
-    });
-  });
-
-  $("#btn2").click(function(){
-    $("#test2").html(function(i, origText){
-      return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")"; 
-    });
-  });
-});
+function appendText() {
+  var txt1 = "<p>Text.</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+  var txt3 = document.createElement("p");
+  txt3.innerHTML = "Text.";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements
+}
 </script>
 </head>
 <body>
 
-<p id="test1">This is a <b>bold</b>Phạm Anh Tú 2121051161  </p>
-<p id="test2">Phạm Anh Tú 2121051161 <b>bold</b> paragraph.</p>
-
-<button id="btn1">Show Old/New Text</button>
-<button id="btn2">Show Old/New HTML</button>
+<p>Phạm Anh Tú 2121051161</p>
+<button onclick="appendText()">Append text</button>
 
 </body>
 </html>
