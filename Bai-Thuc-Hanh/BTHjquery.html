@@ -3,23 +3,18 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.post("demo_test_post.asp",
-    {
-      name: "Donald Duck",
-      city: "Duckburg"
-    },
-    function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
+$.noConflict();
+jQuery(document).ready(function(){
+  jQuery("button").click(function(){
+    jQuery("p").text("jQuery is still working!");
   });
 });
 </script>
 </head>
 <body>
 
-<button>Phạm Anh Tú 2121051161</button>
+<p>Phạm ANh TÚ 2121051161.</p>
+<button>Test jQuery</button>
 
 </body>
 </html>
