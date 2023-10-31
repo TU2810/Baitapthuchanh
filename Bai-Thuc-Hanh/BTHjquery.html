@@ -2,25 +2,30 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
+<script> 
 $(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").fadeOut();
-    $("#div2").fadeOut("slow");
-    $("#div3").fadeOut(3000);
+  $("#flip").click(function(){
+    $("#panel").slideUp("slow");
   });
 });
 </script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+}
+</style>
 </head>
 <body>
-
-<p>Phạm Anh tú -2121051161</p>
-
-<button>Click to fade out boxes</button><br><br>
-
-<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
-<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
-<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+ 
+<div id="flip">Click to slide up panel</div>
+<div id="panel">Phạm ANh tú 2121051161</div>
 
 </body>
 </html>
