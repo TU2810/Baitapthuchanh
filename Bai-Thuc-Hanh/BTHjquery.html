@@ -4,32 +4,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("div").last().css("background-color", "yellow");
+  $("button").click(function(){
+    $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+      if(statusTxt == "success")
+        alert("External content loaded successfully!");
+      if(statusTxt == "error")
+        alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+  });
 });
 </script>
 </head>
 <body>
 
-<h1>Phạm Anh Tú 2121051161</h1>
+<div id="div1"><h2>Phạm Anh Tú 2121051161</h2></div>
 
-<p>This is a paragraph.</p>
-
-<div style="border: 1px solid black;">
-  <p>A paragraph in a div.</p>
-  <p>Another paragraph in a div.</p>
-</div>
-<br>
-
-<div style="border: 1px solid black;">
-  <p>A paragraph in another div.</p>
-  <p>Another paragraph in another div.</p>
-</div>
-<br>
-
-<div style="border: 1px solid black;">
-  <p>A paragraph in another div.</p>
-  <p>Another paragraph in another div.</p>
-</div>
+<button>Get External Content</button>
 
 </body>
 </html>
