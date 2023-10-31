@@ -4,23 +4,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script> 
 $(document).ready(function(){
-  $("button").click(function(){
-    $("div").animate({
-      left: '250px',
-      height: '+=150px',
-      width: '+=150px'
-    });
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
   });
 });
-</script> 
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
 </head>
 <body>
+ 
+<button id="stop">Stop sliding</button>
 
-<button>Start Animation</button>
-
-<p>Pham Anh tú 2121051161</p>
-
-<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Phạm ANh Tú 2121051161</div>
 
 </body>
 </html>
