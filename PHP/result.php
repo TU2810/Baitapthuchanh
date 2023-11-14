@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir= "ltr">
-    <head>
-        <meta charset= "utf-8">
-        <title></title>
-    </head>
-<?php
-    // phuong thuc POST
-        $name = $_POST["username"];
-        $password = $_POST["password"];
-        $confirm_password =$_POSt["confilm_password"];
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php echo "the game ";
+    if ($_GET["response"] == "yes")
+    {
+        echo "has been quited ";
 
-    // in thong tin
-        echo "<h1>Thong tin dang ki</h1>";
-        echo "<p>Ten: $name</p>";
-        echo "<p>Password: $password</p>";
+    } 
+    else if ($_GET["respons"] == "no" )
+    {
+        echo " will be continued in 3 second ";
+    }
+    
+    echo "<br> after if statment ";
+
     ?>
+</body>
+</html>
