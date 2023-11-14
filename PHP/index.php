@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>it is chrismas ?</title>
+    <style>
+     html {
+        background-color: black;
+        color: azure;
+        font-size: 300px ;
+        margin: 0 auto;
+     }
+     
+
+    </style>
 </head>
 <body>
- <h2>du bao tring tuyen </h2>
- <form action="result.php" method="post">
-    <label for="toan" > Diem toan :</label><br>
-    <input type="number" name="toan"><br>
-    <label for="ly"> Diem ly :</label><br>
-    <input type="number" name="ly"><br>
-    <label for="hoa">Diem hoa :</label><br>
-    <input type="number" name="hoa"><br>
-     <input type="submit" value="xet">
- </form>
+     <?php 
+     // lay ngay thang hien tai
+     $date = date ("d") ;
+     $month = date ("m") ;
+     //ngay thang giang sinh 
+     $datec = "25";
+     $mothc = "12";
+     // kiem tra neu ngay hom nay = ngay giang sinh thif hirrnj dung ko sai 
+     if ($date == $datec && $month == $monthc) 
+     {
+        echo "dung";
+     }
+     else
+     {
+        echo "sai";
+     }
+
+     ?>
 </body>
 </html>
