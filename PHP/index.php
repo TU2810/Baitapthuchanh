@@ -1,7 +1,6 @@
 <?php
-$items = array('items1.png' , 'items2.png' , 'items3.png' , 'items4.png');
-foreach ($items as $items)
+for ($x = 1 ; $x <= 10 ; $x += +1 )
 {
-    echo "<img src ='images/$item' width = 50pc height = 50px alt='$item'>";
+    echo "Day la so $x <br>";
 }
 ?>
