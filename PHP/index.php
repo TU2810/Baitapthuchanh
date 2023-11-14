@@ -6,18 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-   <h3>doi tien </h3>
-   <form action="result.php " method="get ">
-    <label for="amount"> so tien :</label>
-    <input type="number" name="amount"> <br>
-    <label for="currency"> chon loai tien :</label>
-    <select name="currency" required>
-        <option value="usd">usd - 23,000 vnd</option>
-        <option value="aud">aud - 17,000 vnd </option>
-        <option value="jpy">jpy - 200 vnd</option>
-        <option value="eur">eur - 27,000 vnd </option>
-    </select><br>
-    <input type="submit" value="chuyen doi ">
-   </form>
+ <h2>du bao tring tuyen </h2>
+ <form action="result.php" method="post">
+    <label for="toan" > Diem toan :</label><br>
+    <input type="number" name="toan"><br>
+    <label for="ly"> Diem ly :</label><br>
+    <input type="number" name="ly"><br>
+    <label for="hoa">Diem hoa :</label><br>
+    <input type="number" name="hoa"><br>
+     <input type="submit" value="xet">
+ </form>
 </body>
 </html>

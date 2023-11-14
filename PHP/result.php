@@ -7,35 +7,40 @@
 </head>
 <body>
     <?php 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy giá trị từ form
-    $amount = $_GET["amount"];
-    $currency = $_GET["currency"];
+    $math = $_POST["toan"];
+    $physics = $_POST["ly"];
+    $chemistry = $_POST["hoa"];
 
-    // Tính toán giá trị chuyển đổi
-    switch ($currency) {
-        case "usd":
-            $exchangeRate = 23000;
+    // Tính tổng điểm
+    $totalScore = $math + $physics + $chemistry;
+
+    // Điểm chuẩn của từng chuyên ngành
+    $cutOffScores = array(
+        'cntt' => 18,
+        'cntt_clc' => 22,
+        'khdl' => 18,
+        'dia_chat' => 17,
+        'moi_truong' => 15,
+    );
+
+    // Dự báo ngành trúng tuyển
+    $prediction = "Không rõ";
+
+    foreach ($cutOffScores as $major => $cutOffScore) {
+        if ($totalScore >= $cutOffScore) {
+            $prediction = $major;
             break;
-        case "aud":
-            $exchangeRate = 17000;
-            break;
-        case "jpy":
-            $exchangeRate = 200;
-            break;
-        case "eur":
-            $exchangeRate = 27000;
-            break;
-        default:
-            $exchangeRate = 1; // Mặc định nếu không chọn ngoại tệ
+        }
     }
 
-    $result = $amount * $exchangeRate;
-
     // Hiển thị kết quả
-    echo "<h2>Kết quả chuyển đổi</h2>";
-    echo "<p>$amount $currency = $result VND</p>";
+    echo "<h2>Kết quả dự báo</h2>";
+    echo "<p>Tổng điểm: $totalScore</p>";
+    echo "<p>Ngành trúng tuyển: $prediction</p>";
 }
 ?>
+
 </body>
 </html>
