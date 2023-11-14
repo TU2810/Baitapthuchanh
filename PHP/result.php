@@ -6,19 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo "the game ";
-    if ($_GET["response"] == "yes")
-    {
-        echo "has been quited ";
+    <?php 
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Lấy giá trị từ form
+    $amount = $_GET["amount"];
+    $currency = $_GET["currency"];
 
-    } 
-    else
-    {
-        echo " will be continued in 3 second ";
+    // Tính toán giá trị chuyển đổi
+    switch ($currency) {
+        case "usd":
+            $exchangeRate = 23000;
+            break;
+        case "aud":
+            $exchangeRate = 17000;
+            break;
+        case "jpy":
+            $exchangeRate = 200;
+            break;
+        case "eur":
+            $exchangeRate = 27000;
+            break;
+        default:
+            $exchangeRate = 1; // Mặc định nếu không chọn ngoại tệ
     }
-    
-    echo "<br> after if statment ";
 
-    ?>
+    $result = $amount * $exchangeRate;
+
+    // Hiển thị kết quả
+    echo "<h2>Kết quả chuyển đổi</h2>";
+    echo "<p>$amount $currency = $result VND</p>";
+}
+?>
 </body>
 </html>
