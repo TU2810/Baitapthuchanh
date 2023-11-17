@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-    $exchangeRate = array("usd"=>22300,"eur"=> 27300,"sgd" => 17000,"jpy" => 120 );
-    echo "<h3> Exchange rate vnd </h3>";
-    echo "usd : $exchangeRate[0]<br>";
-    echo "eur : $exchangeRate[1]<br>";
-    echo "sgd : $exchangeRate[2]<br>";
-    echo "jpy : $exchangeRate[3]<br>";
- ?>
+    <form action="result.php" method="get">
+<label for=""> amount :</label>
+<input type="number" name="amount ">
+<select name="currency" id="">
+    <option value="usd">usd</option>
+    <option value="eur">eur</option>
+    <option value="sgd">sgd</option>
+    <option value="jpy">jpy</option>
+</select>
+<input type="submit" value="chuyen doi ">
+    </form>
 </body>
 </html>
