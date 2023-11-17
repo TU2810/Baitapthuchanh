@@ -7,27 +7,11 @@
 </head>
 <body>
     <?php 
-    $usd = 22300;
-    $eur = 27300;
-    $sgd = 17000;
-    $jpy = 120;
-    $amount = $_GET['amount'];
-    echo "$amount usd is equal ";
-    if ($_GET["currency"] == "usd")
-    {
-        echo $amount * $usd ;
-    }
-    elseif ($_GET["currency"] =="eur") {
-        echo $amount * $eur;
-    }
-    elseif ($_GET["currency"] =="sgd") {
-        echo $amount * $sgd;
-    }
-    else {
-        echo $amount * $jpy ;
+$exchangeRate = array ( "usd" => 22300 , "eur" => 27300 ,"sgd" =>17000, "jpy" =>120);
+$amount = $_GET['amount'];
+$currency = $_GET['currency'];
+echo " $amount usd is equal " .number_format ($amout * $exchangeRate[$currency]) . "vnd ";
 
-    }
-echo "vnd ";
  ?>
 </body>
 </html>
