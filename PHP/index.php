@@ -3,74 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xét Học Lực</title>
-  <link rel="stylesheet" href="styles.css">
-<style>
+  <title>Nhập ngày tháng năm</title>
+  <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-label {
-  font-weight: bold;
-}
-
-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-</style>
+      background-color: black;
+    }
+    .test {
+      width: 300px;
+      height: 100px;
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+      border-radius: 5px;
+      margin:0 auto;
+    }
+    .get {
+      background-color: greenyellow;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Xét Học Lực</h1>
-    <form method="post" action="result.php">
-      <label for="toan">Toán:</label>
-      <input type="number" name="toan" step="0.1" min="0" max="10" required>
+  <form class="test" action="result.php" method="get">
+    <h3>Chọn Ngày Tháng Năm </h3>
+<label for=""> Ngay:</label>
+<select name="day" id="day">
+  <?php
+  for($day = 1 ; $day <=31 ; $day++)
+  echo"<option value=\"$day\">$day</option>";
+  ?>
+</select>
 
-      <label for="ly">Lý:</label>
-      <input type="number" name="ly" step="0.1" min="0" max="10" required>
+<label for=""> Thang:</label>
+<select name="month" id="month">
+  <?php
+  for($month = 1 ; $month <=31 ; $month++)
+  echo"<option value=\"$month\">$month</option>";
+  ?>
+</select>
 
-      <label for="hoa">Hóa:</label>
-      <input type="number" name="hoa" step="0.1" min="0" max="10" required>
-
-      <label for="ta">Tự Nhiên (TA):</label>
-      <input type="number" name="ta" step="0.1" min="0" max="10" required>
-
-      <label for="van">Văn:</label>
-      <input type="number" name="van" step="0.1" min="0" max="10" required>
-
-      <label for="ls">Lịch Sử:</label>
-      <input type="number" name="ls" step="0.1" min="0" max="10" required>
-
-      <button type="submit">Xét Học Lực</button>
-    </form>
-  </div>
+<label for=""> Nam:</label>
+<select name="year" id="year">
+  <?php
+  //lay nam hien tai
+  $today = getdate();
+  $curYear = $today["year"];
+  for($year = 1900 ; $year <= $curYear ; $year++)
+  echo"<option value=\"$year\">$year</option>";
+  ?>
+</select><br><br>
+<input class="get" type="submit" value="chọn">
+  </form>
 </body>
 </html>
