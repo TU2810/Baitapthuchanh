@@ -15,6 +15,7 @@
         <input type="password" id="password" name="password" required><br>
 
         <button type="submit">Đăng Nhập</button>
+        <a href="./dangky.php"> dang ky ngay </a>
     </form>
 </body>
 </html>
